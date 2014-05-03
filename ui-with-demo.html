@@ -1,0 +1,26 @@
+<head>
+	<title>ui-with-demo</title>
+</head>
+
+<body>
+{{> hello}}
+</body>
+
+<template name="hello">
+	<h1>Hello!</h1>
+	Welcome to ui-with-demo
+	<br/>	
+	<br/>
+	Calling helper, passing "First Helper Call"
+	<br/>
+	{{> indicator data='First Helper Call'}}
+	<br/>
+	<br/>
+	Calling helper, passing "Second Helper Call"
+	<br/>
+	{{> indicator data='Second Helper Call'}}
+</template>
+
+<template name="_indicator">
+	Template rendered with data: {{dataContext}}
+</template>
